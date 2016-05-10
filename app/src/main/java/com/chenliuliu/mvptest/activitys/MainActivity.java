@@ -2,7 +2,6 @@ package com.chenliuliu.mvptest.activitys;
 
 import android.app.ProgressDialog;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
 
@@ -11,7 +10,10 @@ import com.chenliuliu.mvptest.bean.InfoBean;
 import com.chenliuliu.mvptest.presenter.InfoPresenter;
 import com.chenliuliu.mvptest.views.IInfoView;
 
-public class MainActivity extends AppCompatActivity implements IInfoView, View.OnClickListener {
+import java.util.HashMap;
+import java.util.Map;
+
+public class MainActivity extends BaseActivity implements IInfoView, View.OnClickListener {
     private InfoPresenter presenter;
     private ProgressDialog dialog;
     public String SENSORID = "500004DF6A4A";
@@ -26,7 +28,10 @@ public class MainActivity extends AppCompatActivity implements IInfoView, View.O
         findViewById(R.id.txt_test).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                presenter.getInfo(MainActivity.this);
+                Map<String, String> params = new HashMap<>();
+                params.put("SENSORID", SENSORID);
+                params.put("KEY", KEY);
+                presenter.getInfo(params);
             }
         });
 
