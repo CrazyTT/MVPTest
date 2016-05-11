@@ -1,7 +1,7 @@
 package com.chenliuliu.mvptest.presenter;
 
 import com.chenliuliu.mvptest.model.IInfoModel;
-import com.chenliuliu.mvptest.model.modelIml.InfoModelImpl;
+import com.chenliuliu.mvptest.modelIml.InfoModelImpl;
 import com.chenliuliu.mvptest.views.IInfoView;
 
 import java.util.Map;
@@ -20,5 +20,8 @@ public class InfoPresenter {
 
     public void getInfo(Map<String ,String> params) {
         infoModel.getInfo(params,this.infoView);
+    }
+    public void getInfo2(Map<String ,String> params) {
+        infoModel.getInfo2(params,this.infoView);
     }
 }

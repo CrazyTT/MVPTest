@@ -10,4 +10,5 @@ import java.util.Map;
 public interface IInfoModel {
     //从数据提供者获取数据方法
     void getInfo(Map<String, String> params, IInfoView uu);
+    void getInfo2(Map<String, String> params, IInfoView uu);
 }

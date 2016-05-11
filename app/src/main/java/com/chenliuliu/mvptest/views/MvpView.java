@@ -8,4 +8,6 @@ public interface MvpView {
     void showProgress();
 
     void hideProgress();
+
+    void showFailureMsg(String str);
 }

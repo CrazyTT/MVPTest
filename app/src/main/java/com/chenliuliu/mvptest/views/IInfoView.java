@@ -6,7 +6,7 @@ import com.chenliuliu.mvptest.bean.InfoBean;
  * Created by liuliuchen on 16/5/9.
  */
 public interface IInfoView extends MvpView {
-    void showInfoSucess(InfoBean info);
+    void showInfoSuccess(InfoBean info);
+    void showInfoSuccess2(InfoBean info);
 
-    void showInfoFailure(String info);
 }

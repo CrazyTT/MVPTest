@@ -32,6 +32,7 @@ public class MainActivity extends BaseActivity implements IInfoView, View.OnClic
                 params.put("SENSORID", SENSORID);
                 params.put("KEY", KEY);
                 presenter.getInfo(params);
+                presenter.getInfo2(params);
             }
         });
 
@@ -43,13 +44,20 @@ public class MainActivity extends BaseActivity implements IInfoView, View.OnClic
     }
 
     @Override
-    public void showInfoSucess(InfoBean info) {
+    public void showInfoSuccess(InfoBean info) {
+        System.out.println(info.getMessage() + "1");
         Toast.makeText(this, info.getMessage(), Toast.LENGTH_LONG).show();
 
     }
 
     @Override
-    public void showInfoFailure(String info) {
+    public void showInfoSuccess2(InfoBean info) {
+        System.out.println(info.getMessage() + "2");
+        Toast.makeText(this, info.getMessage(), Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    public void showFailureMsg(String info) {
         Toast.makeText(this, info, Toast.LENGTH_LONG).show();
 
     }
