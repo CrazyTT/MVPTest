@@ -10,8 +10,6 @@ import com.zhy.http.okhttp.OkHttpUtils;
 import com.zhy.http.okhttp.callback.Callback;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Map;
 
 import okhttp3.Call;
@@ -53,17 +51,6 @@ public class InfoModelImpl implements IInfoModel {
                 iInfoView.showInfoSuccess2(response);
             }
         });
-
-        List<String> images = new ArrayList<>();
-        images.add("http://img3.imgtn.bdimg.com/it/u=4271053251,2424464488&fm=21&gp=0.jpg");
-        images.add("http://pic36.nipic.com/20131217/6704106_233034463381_2.jpg");
-        String str = "<!--IMG#0-->sjdlsklfsjkldfkjsldfjkls<!--IMG#1-->sldjskfjslkfjskfjsklfjskl";
-        for (int i = 0; i < images.size(); i++) {
-            str=str.replace("<!--IMG#" + i + "-->",
-                    "<img src=" + images.get(i) + " /> ");
-        }
-        System.out.println(str);
-
     }
 
     abstract class UserCallback extends Callback<InfoBean> {
