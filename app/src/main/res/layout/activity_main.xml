@@ -10,10 +10,25 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".activitys.MainActivity">
 
-    <Button
+
+    <TextView
         android:id="@+id/txt_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btn_test"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
+        android:text="获取数据"/>
+
+    <Button
+        android:id="@+id/btn_get_session"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_test"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
         android:text="获取数据"/>
 </RelativeLayout>

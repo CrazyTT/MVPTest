@@ -8,4 +8,19 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="myDialogTheme" parent="android:Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <!-- Dialog的windowFrame框为无 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 是否漂现在activity上 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 是否半透明 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 除去title -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 除去背景色@null,设置背景图片 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 设置显示时周边是否为灰色，若要灰色，就就将上面的属性去掉 -->
+    </style>
+
 </resources>

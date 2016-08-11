@@ -18,10 +18,14 @@ public class InfoPresenter {
         infoModel = new InfoModelImpl();
     }
 
-    public void getInfo(Map<String ,String> params) {
-        infoModel.getInfo(params,this.infoView);
+    public void getInfo(Map<String, String> params) {
+        for (int i = 0; i < 9; i++) {
+            infoModel.getInfo(params, this.infoView);
+        }
+
     }
-    public void getInfo2(Map<String ,String> params) {
-        infoModel.getInfo2(params,this.infoView);
+
+    public void getSession(Map<String, String> params) {
+        infoModel.getSession(params, this.infoView);
     }
 }
