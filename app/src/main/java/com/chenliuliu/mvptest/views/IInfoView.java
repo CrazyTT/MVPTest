@@ -1,12 +1,13 @@
 package com.chenliuliu.mvptest.views;
 
 import com.chenliuliu.mvptest.bean.InfoBean;
+import com.chenliuliu.mvptest.bean.LoginBean;
 
 /**
  * Created by liuliuchen on 16/5/9.
  */
 public interface IInfoView extends MvpView {
     void showInfoSuccess(InfoBean info);
-    void showInfoSuccess2(InfoBean info);
+    void showInfoSuccess2(LoginBean info);
 
 }

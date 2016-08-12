@@ -7,9 +7,11 @@ import android.widget.Toast;
 
 import com.chenliuliu.mvptest.R;
 import com.chenliuliu.mvptest.bean.InfoBean;
+import com.chenliuliu.mvptest.bean.LoginBean;
 import com.chenliuliu.mvptest.presenter.InfoPresenter;
 import com.chenliuliu.mvptest.utils.AppUtils;
 import com.chenliuliu.mvptest.utils.ProgressUtil;
+import com.chenliuliu.mvptest.utils.ToastUtils;
 import com.chenliuliu.mvptest.views.IInfoView;
 
 import java.util.HashMap;
@@ -69,14 +71,14 @@ public class MainActivity extends BaseActivity implements IInfoView, View.OnClic
     @Override
     public void showInfoSuccess(InfoBean info) {
         System.out.println(info.getMessage() + "1");
-        Toast.makeText(this, info.getMessage(), Toast.LENGTH_LONG).show();
+        ToastUtils.toast(this,info.getMessage(),ToastUtils.LENGTH_SHORT);
         mHello.setText(info.getMessage());
     }
 
     @Override
-    public void showInfoSuccess2(InfoBean info) {
-        System.out.println(info.getMessage() + "2");
-        Toast.makeText(this, info.getMessage(), Toast.LENGTH_LONG).show();
+    public void showInfoSuccess2(LoginBean info) {
+        mHello.setText(info.getLogin_result());
+        ToastUtils.toast(this,info.getLogin_result(),ToastUtils.LENGTH_SHORT);
     }
 
     @Override
@@ -88,7 +90,6 @@ public class MainActivity extends BaseActivity implements IInfoView, View.OnClic
     @Override
     public void showProgress() {
         ProgressUtil.showProgressDlg(this);
-
     }
 
     @Override

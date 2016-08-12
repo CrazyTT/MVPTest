@@ -19,9 +19,7 @@ public class InfoPresenter {
     }
 
     public void getInfo(Map<String, String> params) {
-        for (int i = 0; i < 9; i++) {
-            infoModel.getInfo(params, this.infoView);
-        }
+        infoModel.getInfo(params, this.infoView);
 
     }
 

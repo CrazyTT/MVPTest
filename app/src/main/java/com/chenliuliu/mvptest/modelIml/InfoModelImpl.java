@@ -33,6 +33,21 @@ public class InfoModelImpl implements IInfoModel {
 
     @Override
     public void getSession(Map<String, String> params, final IInfoView iInfoView) {
-        HttpUtils.getInstance().executeGet("http://192.168.50.251:8080/bjgh/main!mobileLogin", params, LoginBean.class, null);
+        iInfoView.showProgress();
+        HttpUtils.getInstance().executeGet("http://192.168.50.251:8080/bjgh/main!mobileLogin", params, LoginBean.class, new HttpUtilsCallBack<LoginBean>() {
+            @Override
+            public void onError(String str) {
+                iInfoView.hideProgress();
+                iInfoView.showFailureMsg(str);
+
+            }
+
+            @Override
+            public void onSuccess(LoginBean object) {
+                iInfoView.hideProgress();
+                iInfoView.showInfoSuccess2(object);
+
+            }
+        });
     }
 }

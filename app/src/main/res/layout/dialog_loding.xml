@@ -15,5 +15,5 @@
         android:layout_centerInParent="true"
         android:layout_gravity="center"
         android:background="@android:color/transparent"
-        app:SpinKit_Color="@color/colorAccent"/>
+        app:SpinKit_Color="#ffffff"/>
 </RelativeLayout>
